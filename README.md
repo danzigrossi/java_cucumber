@@ -37,12 +37,12 @@ __config__/\<environment>/\<browser>
 
 ![estrutura config](https://github.com/danzigrossi/java_cucumber/blob/master/imgs/config_estructure.png)
 
-Dentro da pasta config temos os ambientes separados por pastas(Figura: itens de 1~4, em azul) que representam os ambientes.<br> 
-Em cada ambiente tem um arquivo denominado system_properties.properties(Figura: itens de 9~12, em verde) que guarda as configurações do sistema. Segue exemplo
+Dentro da pasta config temos os ambientes separados por pastas(Figura: itens de 1\~4, em azul) que representam os ambientes.<br> 
+Em cada ambiente tem um arquivo denominado system_properties.properties(Figura: itens de 9~\12, em verde) que guarda as configurações do sistema. Segue exemplo
 
 ![System.properties](https://github.com/danzigrossi/java_cucumber/blob/master/imgs/system_properties.png)
 
-Dentro das pastas de ambiente, temos as pastas dos browse (Figura: estrutura_config, itens de 5~8, em vermelho), mozila e chrome, cada pasta de navegador tem um arquivo de configuração para o mesmo. O arquivo é o config.properties. <br>
+Dentro das pastas de ambiente, temos as pastas dos browse (Figura: estrutura_config, itens de 5\~8, em vermelho), mozila e chrome, cada pasta de navegador tem um arquivo de configuração para o mesmo. O arquivo é o config.properties. <br>
 Segue exemplo;
 
 ![config.properties](https://github.com/danzigrossi/java_cucumber/blob/master/imgs/config_properties.png)
