@@ -31,8 +31,6 @@ As variáveis são mapeados no ".pom" do projeto com o auxilio do plugin surefir
 environment: define qual o ambiente de execução(local, junit, dev e QA)<br>
 browser: define qual o navegador que será utilizado para a validação dos testes<br>
 
------ paramters
-
 Dado a leitura de variáveis de inicialização, o sistema sabe quais propriedades/configurações que o mesmo deve ler. Estes arquivos de configuração estão na pasta __\<projetc>/config__ sob a seguinte estrutura
 
 __config__/\<environment>/\<browser>
