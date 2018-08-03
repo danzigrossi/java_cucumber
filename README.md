@@ -17,3 +17,34 @@ Download:
 2 - StepDefinitions<br>
 3 - Classes de apoio<br>
 4 - Features/Behaviors<br>
+
+
+## Configurações
+
+
+### Parametros:
+O projeto possui um sistema de leitura de variáveis de start que orientam sua execução.<br>
+As variáveis são mapeados no ".pom" do projeto com o auxilio do plugin surefire <br>
+
+----- pom - surefire
+
+environment: define qual o ambiente de execução(local, junit, dev e QA)<br>
+browser: define qual o navegador que será utilizado para a validação dos testes<br>
+
+----- paramters
+
+Dado a leitura de variáveis de inicialização, o sistema sabe quais propriedades/configurações que o mesmo deve ler. Estes arquivos de configuração estão na pasta __\<projetc>/config__ sob a seguinte estrutura
+
+__config__/\<environment>/\<browser>
+
+----- estrutura config
+
+Dentro da pasta config temos os ambientes separados por pastas(local, junit, dev e QA) que representam os ambientes. Em cada ambiente tem um arquivo denominado system_properties.properties que guarda as configurações do sistema. Segue exemplo
+
+--- System.properties example
+
+Dentro das pastas de ambiente, temos as pastas dos browser, atualmente documentamos as pastas do mozila e chrome
+cada pasta de navegador tem um arquivo de configuração para o mesmo. o arquivo é o config.properties. Segue um exemplo;
+
+--- config.properties example
+
