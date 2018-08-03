@@ -45,7 +45,6 @@ public class LogarCucumber {
         if (Optional.ofNullable(new HomePage()).isPresent()){
             (new HomePage()).closeDriver();
         }
-
     }
 
 }

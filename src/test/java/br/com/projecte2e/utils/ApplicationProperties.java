@@ -80,7 +80,7 @@ public class ApplicationProperties {
 				driver.manage().timeouts().implicitlyWait(10,
 														  TimeUnit.SECONDS);
 			} catch (Exception e) {
-				System.out.println("NÃO FOR POSSÍVEL INSTANCIAR O DRIVER DO NAVEGADOR");
+				System.out.println("NÃO FOI POSSÍVEL INSTANCIAR O DRIVER DO NAVEGADOR");
 				e.printStackTrace();
 			}
 		}
