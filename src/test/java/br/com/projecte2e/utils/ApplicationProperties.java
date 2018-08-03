@@ -15,11 +15,11 @@ public class ApplicationProperties {
 	private static final String SEPARATOR = "/";
 	private static final String BROWSER_DRIVER_CLASS = "browser.driver.class";
 	private static final String BROWSER_DRIVER_PATH = "browser.driver.path";
-	private static final String BROWSER_SYSTEM_PROPERTY = "browser.systemproperty";
+	private static final String BROWSER_SYSTEM_PROPERTY = "browser.systemroperty";
 	private static final String BROWSER = "browser";
-	private static final String EXECTION_ENVIRONMENT = "environment";
+	private static final String EXECUTION_ENVIRONMENT = "environment";
 	private static final String SYSTEM_PROPERTIES = "/system_properties.properties";
-	private static final String PASTADE_CONFIGURACAO = "./config/";
+	private static final String CONFIG_FOLDER = "./config/";
 	private static ApplicationProperties instance = null;
 	private Properties properties;
 	private Properties browserProperties;
@@ -27,7 +27,7 @@ public class ApplicationProperties {
 
 	protected ApplicationProperties() throws IOException {
 		
-		String environment = System.getProperty(EXECTION_ENVIRONMENT);
+		String environment = System.getProperty(EXECUTION_ENVIRONMENT);
 		String browser = System.getProperty(BROWSER);
 
 		if (StringUtils.isEmpty(environment)) {
@@ -35,7 +35,7 @@ public class ApplicationProperties {
 			System.out.println("Usando default ENV");
 		}
 		properties = new Properties();
-		properties.load(new FileInputStream(PASTADE_CONFIGURACAO + environment + SYSTEM_PROPERTIES));
+		properties.load(new FileInputStream(CONFIG_FOLDER + environment + SYSTEM_PROPERTIES));
 		
 		if (browser == null) {
 			browser = getValue(DEFAULT_BROWSER);
@@ -43,7 +43,7 @@ public class ApplicationProperties {
 		}
 		System.out.println(browser);
 		browserProperties = new Properties();
-		browserProperties.load(new FileInputStream(PASTADE_CONFIGURACAO 
+		browserProperties.load(new FileInputStream(CONFIG_FOLDER
 				+ environment 
 				+ SEPARATOR 
 				+ browser 
@@ -66,16 +66,16 @@ public class ApplicationProperties {
 		return properties.getProperty(key);
 	}
 	
-	public String getBroserValue(String key) {
+	public String getBrowserValue(String key) {
 		return browserProperties.getProperty(key);
 	}
 
 	public WebDriver getDriver() {
 		if (null == driver) {
-			System.setProperty(getBroserValue(BROWSER_SYSTEM_PROPERTY), getBroserValue(BROWSER_DRIVER_PATH));
+			System.setProperty(getBrowserValue(BROWSER_SYSTEM_PROPERTY), getBrowserValue(BROWSER_DRIVER_PATH));
 			Class<?> cls;
 			try {
-				cls = (Class.forName(getBroserValue(BROWSER_DRIVER_CLASS)));
+				cls = (Class.forName(getBrowserValue(BROWSER_DRIVER_CLASS)));
 				driver = (WebDriver) cls.newInstance();
 				driver.manage().timeouts().implicitlyWait(10,
 														  TimeUnit.SECONDS);

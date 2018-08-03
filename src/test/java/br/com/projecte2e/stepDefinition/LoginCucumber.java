@@ -11,7 +11,7 @@ import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import cucumber.table.DataTable;
 
-public class LogarCucumber {
+public class LoginCucumber {
 	HomePage homePage;
 	
 	@Given("^Estar na tela inicial da aplicação$")
