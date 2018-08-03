@@ -12,7 +12,7 @@ public class HomePage extends AbstractPage{
 		super();
 	}
 	
-	public HomePage navagateToBluetecWeb() {
+	public HomePage navigate() {
 		navigateTo(urlHomePage);
 		return new HomePage();
 	}

@@ -6,7 +6,6 @@ import java.util.Optional;
 import br.com.projecte2e.page.HomePage;
 import br.com.projecte2e.page.IndexPage;
 import cucumber.annotation.After;
-import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
@@ -18,7 +17,7 @@ public class LogarCucumber {
 	@Given("^Estar na tela inicial da aplicação$")
 	public void openChromeBrowser() {
 		homePage = new HomePage();
-		homePage.navagateToBluetecWeb(); 
+		homePage.navigate();
 	}
 
 	@When("^logar na aplicação com um login valido$")
