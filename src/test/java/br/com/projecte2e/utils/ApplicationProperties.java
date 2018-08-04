@@ -15,7 +15,7 @@ public class ApplicationProperties {
 	private static final String SEPARATOR = "/";
 	private static final String BROWSER_DRIVER_CLASS = "browser.driver.class";
 	private static final String BROWSER_DRIVER_PATH = "browser.driver.path";
-	private static final String BROWSER_SYSTEM_PROPERTY = "browser.systemroperty";
+	private static final String BROWSER_SYSTEM_PROPERTY = "browser.systemproperty";
 	private static final String BROWSER = "browser";
 	private static final String EXECUTION_ENVIRONMENT = "environment";
 	private static final String SYSTEM_PROPERTIES = "/system_properties.properties";
@@ -85,7 +85,6 @@ public class ApplicationProperties {
 			}
 		}
 		return driver;
-		
 	}
 
 }
