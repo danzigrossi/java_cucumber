@@ -47,3 +47,15 @@ Segue exemplo;
 
 ![config.properties](https://github.com/danzigrossi/java_cucumber/blob/master/imgs/config_properties.png)
 
+## Execução
+
+### jUnit
+Podemos rodalo normalmente como junity
+
+![jUnity](https://github.com/danzigrossi/java_cucumber/blob/master/imgs/exec_junit.png)
+
+para esta execução serão utilizadas as configuraçes que estão na pasta config/junit
+
+### Terminal
+Tambem podemos executar os testes pelo terminal, basta digitar o comando:<br>
+\# mvn test -Denvironment=dev -Dbrowser=mozila
