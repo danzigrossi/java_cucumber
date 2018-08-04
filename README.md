@@ -59,3 +59,8 @@ para esta execução serão utilizadas as configuraçes que estão na pasta conf
 ### Terminal
 Tambem podemos executar os testes pelo terminal, basta digitar o comando:<br>
 \# mvn test -Denvironment=dev -Dbrowser=mozila
+
+## Considerações finais
+A feature de exemplo contida no projeto(__ValidLogin.feature__), tenta fazer login no projeto [Springboot MVC](https://github.com/danzigrossi/springboot_mvc_example), ou seja, caso queria testar a solução sem alteraçes, será necessário subir este projeto também, contudo, seria um bom exercício configurar o projeto para fazer login em um outro site, como por exemplo, facebook, gmail, etc
+ 
+ []s
